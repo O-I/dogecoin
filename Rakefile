@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/O-I/dogecoin"
   gem.license = "MIT"
   gem.summary = %Q{Ruby wrapper for the DogeAPI}
-  gem.description = %Q{Wow! Send and receive much Dogecoins!}
+  gem.description = %Q{Such wow! Send and receive much Dogecoins!}
   gem.email = "hore.rahul@gmail.com"
   gem.authors = ["Rahul Horé"]
   # dependencies defined in Gemfile
