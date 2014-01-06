@@ -81,7 +81,5 @@ module DogeCoin
       # /wow/?a=get_current_block
       Faraday.get("#{BASE_URL}##{ACTION}get_current_block").body
     end
-
-    binding.pry
   end
 end
