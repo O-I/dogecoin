@@ -2,23 +2,23 @@ require 'pry'
 require 'json'
 require 'dotenv'
 require 'faraday'
-require 'dogecoin/configuration'
+require './configuration'
 
 Dotenv.load '../.env'
 
 module DogeCoin
   class Client
     include DogeCoin::Configuration
+    include Faraday
 
     BASE_URL = 'https://dogeapi.com/wow/?'
 
     def initialize
       reset
-      # do I initialize API key here?
     end
 
-    def set_url_params(url, name, options)
-    end
+    # def set_url_params(url, name, options)
+    # end
 
     #   HTTParty quick & dirty example
     #   response = HTTParty.get('http://twitter.com/statuses/public_timeline.json')
@@ -68,5 +68,6 @@ module DogeCoin
       # /wow/?a=get_current_block
     end
 
+    binding.pry
   end
 end
