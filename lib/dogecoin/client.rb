@@ -22,9 +22,9 @@ module DogeCoin
     # def set_url_params(url, name, options)
     # end
 
-    #   HTTParty quick & dirty example
-    #   response = HTTParty.get('http://twitter.com/statuses/public_timeline.json')
-    #   puts response.body, response.code, response.message, response.headers.inspect
+    #   Faraday quick & dirty example
+    #   response = Faraday.get('http://twitter.com/statuses/public_timeline.json')
+    #   puts response.body, response.status, response.method, response.response_headers, response.url, response.response
     
 
     ### Stubbed out API requests per DogeAPI documentation
