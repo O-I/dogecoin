@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # To make HTTP requests
 gem 'httparty'
+gem 'faraday'
 
 # To keep API keys private
 gem 'dotenv'
