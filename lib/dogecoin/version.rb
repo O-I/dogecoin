@@ -6,9 +6,10 @@ module DogeCoin
     BUILD = 'alpha'
 
     class << self
-      # @return [String]
+      # returns 'MAJOR.MINOR.PATCH'
+      # or 'MAJOR.MINOR.PATCH-BUILD' if BUILD is not nil or ''
       def to_s
-        [MAJOR, MINOR, PATCH].join('.')+("-#{BUILD}" if BUILD).to_s
+        [MAJOR, MINOR, PATCH].join('.')+("-#{BUILD}" unless BUILD.nil? || BUILD.empty?).to_s
       end
     end
   end
