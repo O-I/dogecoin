@@ -1,6 +1,6 @@
 # dogecoin
 
-Ruby bindings for the DogeAPI
+Ruby bindings for the [DogeAPI](http://www.dogeapi.com). Currently in alpha.
 
 ## Contributing to dogecoin
  
