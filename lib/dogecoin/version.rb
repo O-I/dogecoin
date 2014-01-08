@@ -3,13 +3,13 @@ module DogeCoin
     MAJOR = 0
     MINOR = 0
     PATCH = 1
-    BUILD = 'alpha'
+    BUILD = nil
 
     class << self
       # returns 'MAJOR.MINOR.PATCH'
-      # or 'MAJOR.MINOR.PATCH-BUILD' if BUILD is not nil or ''
+      # or 'MAJOR.MINOR.PATCH.BUILD' if BUILD is not nil
       def to_s
-        [MAJOR, MINOR, PATCH].join('.')+("-#{BUILD}" unless BUILD.nil? || BUILD.empty?).to_s
+        [MAJOR, MINOR, PATCH, BUILD].compact.join('.')
       end
     end
   end
