@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # To make HTTP requests
 gem 'faraday'
 
-# To keep API keys private
-gem 'dotenv'
-
 group :development do
   gem 'pry'
   gem 'shoulda', '>= 0'

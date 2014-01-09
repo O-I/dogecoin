@@ -1,10 +1,7 @@
 require 'pry'
 require 'json'
-require 'dotenv'
 require 'faraday'
 require 'dogecoin/configuration'
-
-Dotenv.load '../.env'
 
 module DogeCoin
   class Client
