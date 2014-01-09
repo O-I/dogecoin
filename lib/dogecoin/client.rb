@@ -12,22 +12,10 @@ module DogeCoin
     include Faraday
 
     BASE_URL = "https://dogeapi.com/wow/?"
-    # API_KEY  = "api_key=api_key=#{api_key}"
-    # ACTION   = "&a="
 
     def initialize
       reset
     end
-
-    # def set_url_params(url, name, options)
-    # end
-
-    #   Faraday quick & dirty example
-    #   response = Faraday.get('http://twitter.com/statuses/public_timeline.json')
-    #   puts response.body, response.status, response.method, response.response_headers, response.url, response.response
-    
-
-    ### Stubbed out API requests per DogeAPI documentation
 
     # Returns the DOGE balance of your entire account to 8 decimal places.
     def get_balance
@@ -81,11 +69,5 @@ module DogeCoin
       # /wow/?a=get_current_block
       Faraday.get("#{BASE_URL}#&a=get_current_block").body
     end
-
-    # private
-
-    # deapi_key=f api_key
-    #   api_key
-    # end
   end
 end
