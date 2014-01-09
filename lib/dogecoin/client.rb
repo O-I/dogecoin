@@ -2,7 +2,7 @@ require 'pry'
 require 'json'
 require 'dotenv'
 require 'faraday'
-require './configuration'
+require 'dogecoin/configuration'
 
 Dotenv.load '../.env'
 
@@ -12,7 +12,7 @@ module DogeCoin
     include Faraday
 
     BASE_URL = "https://dogeapi.com/wow/?"
-    API_KEY  = "api_key=#{api_key}"
+    API_KEY  = "api_key=#{fetch_api_key}"
     ACTION   = "&a="
 
     def initialize
@@ -80,6 +80,12 @@ module DogeCoin
     def get_current_block
       # /wow/?a=get_current_block
       Faraday.get("#{BASE_URL}##{ACTION}get_current_block").body
+    end
+
+    private
+
+    def fetch_api_key
+      api_key
     end
   end
 end
