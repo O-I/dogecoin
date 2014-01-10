@@ -18,43 +18,61 @@ Most methods require an API key. Get yours — and many free coin! — [here](ht
 ```
 ## Usage
 
-Descriptions and examples of the currently supported methods are below.
+Descriptions and examples of the supported actions are below.
 
-- Returns the DOGE balance of your entire account to 8 decimal places
+- Returns the DOGE balance of your entire account to 8 decimal places.
+
 ```ruby
     @shibe.get_balance
 ```
+
 - Withdraws `amount` doge to a `payment_address` you specify. For now, this must be more than 5 doge, and you must have enough extra in your wallet to pay all fees (another 1-3 doge).
 
+```ruby
     @shibe.withdraw(amount, payment_address)
+```
 
 - Returns a new payment address for your account.
 
+```ruby
     @shibe.get_new_address
+```
 
-You can pass an optional alphanumeric `address_label` as a label for the address.
+You can also pass an optional alphanumeric `address_label` as a label for the address.
 
+```ruby
     @shibe.get_new_address(address_label)
+```
 
 - Returns an array of all payment addresses/address IDs for your account.
 
+```ruby
     @shibe.get_my_addresses
+```
 
 - Returns the current amount received to all addresses with `payment_address` or `address_label`.
 
+```ruby
     @shibe.get_address_received(payment_address_or_address_label)
+```
 
 - Returns the payment address for the given `address_label`.
 
+```ruby
     @shibe.get_address_by_label(address_label)
+```
 
 - Returns the current difficulty. This doesn't require an API key.
 
+```ruby
     @shibe.get_difficulty
+```
 
 - Returns the current block. This doesn't require an API key.
 
+```ruby
     @shibe.get_current_block
+```
 
 ## Contributing to dogecoin
  
