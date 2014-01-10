@@ -9,21 +9,21 @@ You can either `gem install dogecoin` or add `gem 'dogecoin'` to your Gemfile an
 ## Configuration
 
 Most methods require an API key. Get yours — and many free coin! — [here](https://www.dogeapi.com). Configure like so, plz:
-
+```ruby
     @shibe = DogeCoin::Client.new
     
     @shibe.configure do |config|
       config.api_key = 'YOUR_API_KEY'
     end
-
+```
 ## Usage
 
 Descriptions and examples of the currently supported methods are below.
 
 - Returns the DOGE balance of your entire account to 8 decimal places
-
+```ruby
     @shibe.get_balance
-
+```
 - Withdraws `amount` doge to a `payment_address` you specify. For now, this must be more than 5 doge, and you must have enough extra in your wallet to pay all fees (another 1-3 doge).
 
     @shibe.withdraw(amount, payment_address)
