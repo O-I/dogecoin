@@ -1,6 +1,6 @@
 require 'faraday_middleware'
 
-module Dogecoin
+module DogeCoin
   module Connection
     private
 
