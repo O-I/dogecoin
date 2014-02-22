@@ -1,10 +1,14 @@
 require 'pry'
 require 'json'
 require 'faraday'
+require 'dogecoin/request'
+require 'dogecoin/connection'
 require 'dogecoin/configuration'
 
 module DogeCoin
   class Client
+    include DogeCoin::Request
+    include DogeCoin::Connection
     include DogeCoin::Configuration
     include Faraday
 
