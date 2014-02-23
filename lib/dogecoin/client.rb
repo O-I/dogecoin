@@ -1,8 +1,8 @@
 require 'pry'
 require 'json'
 require 'faraday'
-require 'dogecoin/request'
-require 'dogecoin/connection'
+require_relative 'request'
+require_relative 'connection'
 require 'dogecoin/configuration'
 
 module DogeCoin
