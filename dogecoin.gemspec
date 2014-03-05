@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rahul Hor\u{e9}"]
-  s.date = "2014-01-10"
+  s.date = "2014-03-05"
   s.description = "Such wow! Send and receive much Dogecoins!"
   s.email = "hore.rahul@gmail.com"
   s.extra_rdoc_files = [
@@ -19,15 +19,21 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".rspec",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
+    "dogecoin.gemspec",
     "lib/dogecoin.rb",
     "lib/dogecoin/client.rb",
-    "lib/dogecoin/configuration.rb"
+    "lib/dogecoin/configuration.rb",
+    "lib/dogecoin/connection.rb",
+    "lib/dogecoin/request.rb",
+    "spec/dogecoin_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/O-I/dogecoin"
   s.licenses = ["MIT"]
@@ -40,7 +46,9 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<faraday>, [">= 0"])
+      s.add_runtime_dependency(%q<faraday_middleware>, [">= 0"])
       s.add_development_dependency(%q<pry>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
@@ -48,7 +56,9 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
       s.add_dependency(%q<faraday>, [">= 0"])
+      s.add_dependency(%q<faraday_middleware>, [">= 0"])
       s.add_dependency(%q<pry>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
@@ -57,7 +67,9 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<faraday>, [">= 0"])
+    s.add_dependency(%q<faraday_middleware>, [">= 0"])
     s.add_dependency(%q<pry>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])
