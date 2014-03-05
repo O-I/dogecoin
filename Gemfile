@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # To make HTTP requests
 gem 'faraday'
+gem 'faraday_middleware'
 
 group :development do
   gem 'pry'
