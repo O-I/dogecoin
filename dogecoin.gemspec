@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rahul Hor\u{e9}"]
-  s.date = "2014-03-05"
+  s.date = "2014-03-06"
   s.description = "Such wow! Send and receive much Dogecoins!"
   s.email = "hore.rahul@gmail.com"
   s.extra_rdoc_files = [
@@ -21,7 +21,6 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
