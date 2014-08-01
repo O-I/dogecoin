@@ -1,3 +1,5 @@
+**Note:** DogeAPI is [shutting down](http://www.dogeapi.com). For an alternative digital wallet API that supports Dogecoin, Litecoin, and Bitcoin, give [Block.io](https://block.io) a try. Their Ruby client is under development [here](https://github.com/BlockIo/gem-block-io).
+
 # dogecoin
 
 Ruby wrapper for the [DogeAPI](https://www.dogeapi.com). Send and receive Dogecoins. Currently very alpha, while the API is so beta. Such wow, regardless — with much amaze planned for the future.
